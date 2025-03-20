@@ -9,6 +9,30 @@
         <artifactId>mcp-servers-parent</artifactId>
         <version>999-SNAPSHOT</version>
     </parent>
+
+    <repositories>
+    <repository>
+        <id>central</id>
+        <url>https://repo.maven.apache.org/maven2</url>
+        <releases>
+            <enabled>true</enabled>
+        </releases>
+        <snapshots>
+            <enabled>false</enabled>
+        </snapshots>
+    </repository>
+    
+    <repository>
+        <id>custom-repo</id>
+        <url>https://mvnrepository.com/artifact/</url>
+        <releases>
+            <enabled>true</enabled>
+        </releases>
+        <snapshots>
+            <enabled>true</enabled>
+        </snapshots>
+    </repository>
+</repositories>
     
     <properties>
        
@@ -48,6 +72,8 @@
             <groupId>com.ibm.db2</groupId>
             <artifactId>db2jcc</artifactId>
             <version>11.5</version>
+            <scope>system</scope>
+            <systemPath>C:\\tmp\\db2jcc4.jar</systemPath>
         </dependency>
 
        
