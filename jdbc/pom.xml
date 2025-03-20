@@ -43,6 +43,13 @@
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-arc</artifactId>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.ibm.db2/jcc -->
+        <dependency>
+            <groupId>com.ibm.db2</groupId>
+            <artifactId>jcc</artifactId>
+            <version>12.1.0.0</version>
+        </dependency>
+
        
        
 
