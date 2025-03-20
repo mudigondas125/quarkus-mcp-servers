@@ -24,7 +24,7 @@
     
     <repository>
         <id>custom-repo</id>
-        <url>https://mvnrepository.com/artifact/</url>
+        <url>https://mvnrepository.com/artifact/com.ibm.db2/jcc</url>
         <releases>
             <enabled>true</enabled>
         </releases>
@@ -183,11 +183,12 @@
         <profile>
             <id>db2</id>
             <dependencies>
+            <!-- https://mvnrepository.com/artifact/com.ibm.db2/jcc -->
                 <dependency>
-                    <!-- https://mvnrepository.com/artifact/com.ibm.db2/jcc -->
                     <groupId>com.ibm.db2</groupId>
                     <artifactId>jcc</artifactId>
-                    <version>11.1.4.4</version>
+                    <version>11.5.8.0</version>
+                    <scope>test</scope>
                 </dependency>
             </dependencies>
         </profile>
