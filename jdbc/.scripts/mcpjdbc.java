@@ -156,7 +156,7 @@ class jdbc implements Callable<Integer> {
         drivers.put("derby", List.of("org.apache.derby:derby:RELEASE"));
         // DB2 Support
         // https://www.ibm.com/support/pages/db2-jdbc-driver-versions-and-downloads
-        drivers.put("db2", List.of("com.ibm.db2.jcc.DB2Driver"));
+        drivers.put("db2", List.of("com.ibm.db2.jcc.DB2Driver:12.1.0.0"));
         drivers.put("sqlite", List.of("org.xerial:sqlite-jdbc:RELEASE", "org.slf4j:slf4j-simple:1.7.36"));
         return drivers;
     }
