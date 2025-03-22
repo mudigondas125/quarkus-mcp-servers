@@ -89,6 +89,8 @@ class jdbc implements Callable<Integer> {
 
         command.add(jbangcmd);
         command.add("--quiet");
+        command.add("--java");
+        command.add("17+");
         command.add("--deps");
         command.add(String.join(",", driverDependency));
 
@@ -96,9 +98,20 @@ class jdbc implements Callable<Integer> {
 
         if (user != null) {
             command.add("-Djdbc.user=" + user);
+        } else {
+            user = System.getenv("DB_USER");
+            if (user != null) {
+                command.add("-Djdbc.user=" + user);
+            }
         }
+        
         if (password != null) {
             command.add("-Djdbc.password=" + password);
+        } else {
+            password = System.getenv("DB_PASS");
+            if (password != null) {
+                command.add("-Djdbc.password=" + password);
+            }
         }
 
         System.getProperties().forEach((key, value) -> {
